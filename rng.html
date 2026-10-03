@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css"></link>
+    <h1>A máquina de gerar números</h1>
+    <p>
+        Um computador por ser uma máquina exata é incapaz de criar ou escolher um número ou valor aleatório, por isso todo número aleatório é resultado de uma sequência numérica determinada por um cálculo matemático.
+        <p>
+            No livro "The C programming language" escrito por Brian Kerninghan e Dennis Ritchie é apresentado uma implementação de uma função de geracção de números pseudoaleatórios seguindo a seguinte fórmula
+            <div class="container">
+                <p style="font-style: italic;">
+                    f(x) = ( ( x * 1103515245 + 12345 ) / 65536 ) mod 32768
+                </p>
+            </div>
+            onde x é o valor anterior da sequência numérica. <br> 
+            o primeiro valor x é o que chamamos de semente ou seed, o que determina que com esse valor, os próximos valores "aleatórios" sejam  previsíveis.
+        </p>
+        <p>
+            Usaremos de exempĺo a seguinte função algébrica para gerar números de 0 a 100:
+            <div class="container">
+                <p style="font-style: italic;">
+                    f(x) = ( x * 12345 ) mod 100
+                </p>
+            </div>
+        </p>
+    </p>
+</body>
+</html>
