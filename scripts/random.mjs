@@ -16,4 +16,7 @@ export class random {
         if (seed == this.seed) return;
         this.seed = this.next = seed;
     }
+    resetSeq(){
+        this.next = this.seed;
+    }
 }

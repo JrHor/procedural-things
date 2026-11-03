@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drunk Walk Simulation</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <style>
+        canvas {
+            border: 2px solid #333;
+            background-color: #f9f9f9;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulação de Drunk Walk (Caminhada Aleatória)</h1>
+    <p>O algoritmo Drunk walk age onde um ponto inicial 0 tem probabilidades iguais de dar um passo de valor definido para quaisquer direção, o algoritmo recebe o nome de "Andar do bêbado" por este comportamento. <br>
+    Este algoritmo é uma grande ferramenta a simular o movimento de gases e estados de patrulha de personagens não jogáveis em jogos.
+    </p>
+    
+
+    <div class="container">
+        <!-- Canvas onde o caminho será desenhado -->
+        <canvas id="drunk-canvas" width="400" height="400"></canvas>
+        
+        <div class="controls">
+            <label for="drunk-seed">Seed:</label>
+            <input type="number" id="drunk-seed" value="42" style="width: 80px;">
+            <button type="button" id="btn-step">Dar Passo</button>
+            <button type="button" id="btn-reset">Resetar</button>
+            <span>Passos: <strong id="step-count">0</strong></span>
+        </div>
+    </div>
+
+    <!-- Importa o script principal como módulo -->
+    <script type="module" src="../scripts/drunk.js"></script>
+</body>
+</html>
