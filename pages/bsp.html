@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSP - Binary Space Partitioning</title>
+    <link rel="stylesheet" href="../styles/bsp.css">
+</head>
+<body>
+    <h1>Binary Space Partitioning (BSP)</h1>
+    <p>O algoritmo BSP subdivide recursivamente o espaço euclidiano em hiperplanos convexos onde seu resultado final é uma estrutura de Árvore bsp.<br>
+        Este é usado frequentemente para geração procedural de construções, masmorras ou salas aleatórias em jogos, como por exemplo no jogo Shattered Pixel Dungeon.<br>
+        A versão a seguir do algoritmo é uma versão levemente modificada para demonstrar como seria essa geração de salas.</p>
+    <div class="controls">
+        <label for="bsp-seed">Seed:</label>
+        <input type="number" id="bsp-seed" value="42" style="width: 80px;">
+        <label for="max-depth">Profundidade Máxima:</label>
+        <input type="number" id="max-depth" value="4" min="1" max="5" style="width: 60px;">
+        <button type="button" id="btn-generate">Gerar Novo BSP</button>
+    </div>
+
+    <div class="main-container">
+        <!-- Canvas para renderizar as partições e salas -->
+        <div class="section">
+            <h2>Mapa (Canvas)</h2>
+            <canvas id="bsp-canvas" width="500" height="500"></canvas>
+        </div>
+
+        <!-- Árvore Binária Gerada -->
+        <div class="section">
+            <h2>Árvore Binária de Divisão</h2>
+            <div id="tree-container" class="tree"></div>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/bsp.js"></script>
+</body>
+</html>
