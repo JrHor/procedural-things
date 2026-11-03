@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Números Pseudoaleatórios</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <h1>A máquina de gerar números</h1>
+    <div>
+        <p>
+            Um computador, por ser uma máquina exata, é incapaz de criar ou escolher um número verdadeiramente aleatório. Por isso, todo número pseudoaleatório é resultado de uma sequência determinada por um cálculo matemático.
+        </p>
+        <div class="container">
+            <p style="font-style: italic;">
+                f(x) = ( ( x * 1103515245 + 12345 ) / 65536 ) mod 32768
+            </p>
+        </div>
+        <p>
+            Onde <strong>x</strong> é o valor anterior da sequência. O primeiro valor é chamado de <em>semente (seed)</em>, o que torna a sequência previsível a partir desse ponto.
+        </p>
+    </div>
+
+    <div class="container">
+        <!-- Corrigido o espaço extra no id -->
+        <p class="console" id="rng-console"></p>
+        <input type="number" id="rng-seed" placeholder="Insira a seed (ex: 0)">
+        <button type="button" id="rng-generate">Gerar</button>
+        <ul id="rng-list"></ul>
+    </div>
+
+    <script type="module" src="../scripts/rng.js"></script>
+</body>
+</html>
