@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perlin Noise 32x32</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+  <style>
+       canvas {
+            border: 2px solid #555;
+            background-color: #000;
+            image-rendering: pixelated; /* Deixa os pixels nítidos */
+            width: 400px;
+            height: 400px;
+            margin-bottom: 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <a href="../index.html">
+    <button> voltar </button>
+</a>
+    <h1>Perlin Noise</h1>
+    <p>O algoritmo perlin noise age com o produto escalar de pontos de uma malha em um espaço, onde cada pixel resulta em um valor escalar sobre o vetor de gradiente determinado aleatóriamente para cada ponto dessa malha, o resultado final são variações de valor com uma ponte suave.<br>
+        Quando se trata em geração procedural de terreno, este é o algoritmo mais comum e usado em jogos como Minecraft, Terraria, No Man's sky e Valheim. O algoritmo também pode ser uilizado para gerar efeitos visuais, texturas, animações naturais e até áudio.
+    <div class="controls">
+        <label for="perlin-seed">Seed:</label>
+        <input type="number" id="perlin-seed" value="42" style="width: 80px;">
+        <label for="perlin-freq">Frequência:</label>
+        <input type="number" id="perlin-freq" value="4" min="1" max="10" style="width: 60px;">
+        <button type="button" id="btn-generate">Gerar Ruído</button>
+    </div>
+
+    <div class="container" style="margin-top: 20px;">
+        <canvas id="perlin-canvas" width="32" height="32"></canvas>
+    </div>
+
+    <script type="module" src="../scripts/perlin.js"></script>
+</body>
+</html>
